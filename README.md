@@ -10,14 +10,17 @@
 ---
 
 # Required ReadMe Info for ALL MCS1653 Projects
-* **Project**   - 
-* **Your Name** - 
-* **Date**      - 
+* **Project**   - Omnipotence
+* **Your Name** - Eric Harrison
+* **Date**      - 05/05/2025
 
 <br>
 
 1. **What are the controls to your game? How do we play?**
-
+WASD to move
+Space to use power
+Mouse to look around
+M1 to shoot
 
 
 <br>
@@ -47,7 +50,7 @@
 <br>
 
 6. **Did you get help from any online websites, videos, or tutorials?** <br> (link them here)
-
+https://www.youtube.com/watch?v=f473C43s8nE
 
 
 <br>
