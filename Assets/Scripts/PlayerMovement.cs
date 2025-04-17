@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+    
     }
 
     // Update is called once per frame
@@ -28,13 +28,15 @@ public class PlayerMovement : MonoBehaviour
         MyInput();
         SpeedControl();
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButtonDown("Jump"))
         {
-            moveSpeed /= 2;
+            moveSpeed /= 3;
+            rb.drag *= 2;
         }
-        else if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetButtonUp("Jump"))
         {
-            moveSpeed *= 2;
+            moveSpeed *= 3;
+            rb.drag /= 2;
         }
     }
 
@@ -58,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
         // Adds force to the player in the move direction
-        rb.AddForce(moveDirection.normalized * moveSpeed, ForceMode.Force);
+        rb.AddForce(moveDirection.normalized * moveSpeed * 100, ForceMode.Force);
     }
 
     private void SpeedControl()
