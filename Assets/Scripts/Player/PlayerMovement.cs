@@ -11,33 +11,20 @@ public class PlayerMovement : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] private float moveSpeed;
 
+    private float currentMoveSpeed;
+
     private float horizontalInput;
     private float verticalInput;
 
     private Vector3 moveDirection;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    
-    }
-
     // Update is called once per frame
     void Update()
     {
+        currentMoveSpeed = moveSpeed * TimeManager.instance.GetPlayerTimeScale();
+
         MyInput();
         SpeedControl();
-
-        if (Input.GetButtonDown("Jump"))
-        {
-            moveSpeed /= 3;
-            rb.drag *= 2;
-        }
-        if (Input.GetButtonUp("Jump"))
-        {
-            moveSpeed *= 3;
-            rb.drag /= 2;
-        }
     }
 
     // FixedUpdate is called at a fixed interval and is independent of frame rate
@@ -60,15 +47,15 @@ public class PlayerMovement : MonoBehaviour
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
         // Adds force to the player in the move direction
-        rb.AddForce(moveDirection.normalized * moveSpeed * 100, ForceMode.Force);
+        rb.AddForce(moveDirection.normalized * currentMoveSpeed * 100, ForceMode.Force);
     }
 
     private void SpeedControl()
     {
         Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-        if (flatVel.magnitude > moveSpeed)
+        if (flatVel.magnitude > currentMoveSpeed)
         {
-            Vector3 limitedVel = flatVel.normalized * moveSpeed;
+            Vector3 limitedVel = flatVel.normalized * currentMoveSpeed;
             rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
         }
     }

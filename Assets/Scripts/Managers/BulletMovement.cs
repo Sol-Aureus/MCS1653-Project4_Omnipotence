@@ -6,51 +6,59 @@ public class BulletMovement : MonoBehaviour
 {
     [Header("Attributes")]
     [SerializeField] private float speed;
+    [SerializeField] private float lifeTime;
     [SerializeField] private float damage;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    private Vector3 previousPos;
+    private float moveDistance = 0;
 
     // Update is called once per frame
     void Update()
     {
+        if (TimeManager.instance.IsTimeStopped())
+        {
+            // If time is stopped, do not move the bullet
+            return;
+        }
+        previousPos = transform.position;
+
         // Move the bullet forward
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        moveDistance += speed * Time.deltaTime;
 
         // Need to send a raycast to check if the bullet hit something (bullet moves too fast)
+        if (Physics.Linecast(previousPos, transform.position, out RaycastHit hitInfo))
+        {
+            // Check the tag of the object hit
+            if (hitInfo.collider.CompareTag("Enemy"))
+            {
+                // Apply damage to the enemy
+                //hitInfo.collider.GetComponent<Enemy>().TakeDamage(damage);
+                // Destroy the bullet
+                Destroy(gameObject);
+            }
+            else if (hitInfo.collider.CompareTag("Wall"))
+            {
+                // Destroy the bullet on collision with a wall
+                Debug.Log("Bullet hit a wall");
+                Destroy(gameObject);
+            }
+        }
+
+        // Check if the bullet is out of bounds
+        if (moveDistance >= lifeTime)
+        {
+            // Destroy the bullet if it exceeds its lifetime
+            Debug.Log("Bullet out of bounds");
+            Destroy(gameObject);
+        }
     }
 
     // Configure the bullet's attributes
-    public void SetAttributes(float speed, float lifeTime, float damage, float bulletSize)
+    public void SetAttributes(float speed, float lifeTime, float damage)
     {
         this.speed = speed;
         this.damage = damage;
-
-        // Set the size of the bullet
-        transform.localScale = new Vector3(bulletSize, bulletSize, bulletSize);
-
-        // Destroy the bullet after its lifetime
-        Destroy(gameObject, lifeTime);
-    }
-
-    // Handle collision with other objects
-    private void OnTriggerEnter(Collider other)
-    {
-        // Check if the bullet hit an enemy
-        if (other.CompareTag("Enemy"))
-        {
-            // Apply damage to the enemy
-            //other.GetComponent<Enemy>().TakeDamage(damage);
-            // Destroy the bullet
-            Destroy(gameObject);
-        }
-        else if (other.CompareTag("Wall"))
-        {
-            // Destroy the bullet on collision with a wall
-            Destroy(gameObject);
-        }
+        this.lifeTime = lifeTime;
     }
 }
