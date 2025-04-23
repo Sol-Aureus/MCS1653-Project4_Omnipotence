@@ -71,4 +71,10 @@ public class PlayerAttack : MonoBehaviour
             yield return new WaitForSeconds(currentFireRate);
         }
     }
+
+    private void OnTimeOnTimeScaleChanged()
+    {
+        // Adjusts the current burst cooldown
+        burstCooldownTimer /= TimeManager.instance.GetPlayerTimeScale();
+    }
 }
