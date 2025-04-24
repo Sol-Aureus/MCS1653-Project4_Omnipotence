@@ -9,7 +9,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
 
     [Header("Attributes")]
-    [SerializeField] private float speed;
+    [SerializeField] private float bulletSpeed;
     [SerializeField] private float lifeTime;
     [SerializeField] private float damage;
     [SerializeField] private float burstCooldown;
@@ -59,7 +59,7 @@ public class PlayerAttack : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, bulletPoint.position, bulletPoint.rotation);
 
         // Configure the bullet's attributes
-        bullet.GetComponent<BulletMovement>().SetAttributes(speed, lifeTime, damage);
+        bullet.GetComponent<BulletMovement>().SetAttributes(bulletSpeed, lifeTime, damage);
     }
 
     // Coroutine for burst fire

@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private Transform orientation;
     [SerializeField] private Rigidbody rb;
 
     [Header("Attributes")]
@@ -16,15 +15,12 @@ public class PlayerMovement : MonoBehaviour
     private float horizontalInput;
     private float verticalInput;
 
-    private Vector3 moveDirection;
-
     // Update is called once per frame
     void Update()
     {
         currentMoveSpeed = moveSpeed * TimeManager.instance.GetPlayerTimeScale();
 
         MyInput();
-        SpeedControl();
     }
 
     // FixedUpdate is called at a fixed interval and is independent of frame rate
@@ -43,20 +39,15 @@ public class PlayerMovement : MonoBehaviour
     // Moves the player based on the input
     private void MovePlayer()
     {
-        // Calculate the move direction based on the orientation of the camera
-        moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+        // Calculate the velocity based on the input
+        Vector3 velo = Vector3.zero;
+        velo += transform.right * horizontalInput;
+        velo += transform.forward * verticalInput;
+        velo *= currentMoveSpeed;
 
-        // Adds force to the player in the move direction
-        rb.AddForce(moveDirection.normalized * currentMoveSpeed * 100, ForceMode.Force);
-    }
+        velo.y = rb.velocity.y; // Preserve the y velocity
 
-    private void SpeedControl()
-    {
-        Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-        if (flatVel.magnitude > currentMoveSpeed)
-        {
-            Vector3 limitedVel = flatVel.normalized * currentMoveSpeed;
-            rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
-        }
+        // Set the velocity of the rigidbody
+        rb.velocity = velo;
     }
 }

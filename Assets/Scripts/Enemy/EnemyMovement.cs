@@ -31,6 +31,14 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Check if time is stopped
+        if (TimeManager.instance.IsTimeStopped())
+        {
+            // If time is stopped, do not move the enemy
+            agent.SetDestination(transform.position); // Stop the enemy from moving
+            return;
+        }
+
         // Check if the player is within the enemy's line of sight
         if (Physics.Linecast(transform.position, player.position, out RaycastHit hit))
         {
@@ -67,11 +75,13 @@ public class EnemyMovement : MonoBehaviour
     private void Attack()
     {
         // Call the attack method from the enemy attack script
+        agent.SetDestination(player.position);
     }
 
     // Method to handle the chase state
     private void Chase()
     {
         // Move towards the player
+        agent.SetDestination(player.position);
     }
 }

@@ -35,6 +35,7 @@ public class BulletMovement : MonoBehaviour
                 // Apply damage to the enemy
                 //hitInfo.collider.GetComponent<Enemy>().TakeDamage(damage);
                 // Destroy the bullet
+                Debug.Log("Bullet hit an enemy");
                 Destroy(gameObject);
             }
             else if (hitInfo.collider.CompareTag("Wall"))

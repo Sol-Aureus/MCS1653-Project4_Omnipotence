@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerCamera : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private Transform orientation;
+    [SerializeField] private Transform player;
     [SerializeField] private Transform bulletPoint;
 
     [Header("Attributes")]
@@ -25,7 +25,7 @@ public class PlayerCamera : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         // Get mouse input
         float mouseX = Input.GetAxis("Mouse X") * sensX * Time.deltaTime;
@@ -40,7 +40,7 @@ public class PlayerCamera : MonoBehaviour
 
         // Apply the rotation to the camera
         transform.rotation = Quaternion.Euler(rotationX, rotationY, 0);
-        orientation.rotation = Quaternion.Euler(0, rotationY, 0);
+        player.rotation = Quaternion.Euler(0, rotationY, 0);
         bulletPoint.rotation = Quaternion.Euler(rotationX, rotationY, 0);
     }
 }
