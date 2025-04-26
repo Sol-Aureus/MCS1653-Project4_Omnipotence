@@ -8,6 +8,7 @@ public class EnemyMovement : MonoBehaviour
     [Header("References")]
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private Rigidbody rb;
+    [SerializeField] private EnemyAttack enemyAttack;
 
     private Transform player;
 
@@ -25,6 +26,7 @@ public class EnemyMovement : MonoBehaviour
         // Initialize the enemy state
         enemyState = EnemyState.Chase;
 
+        // Find the player object in the scene
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
@@ -75,13 +77,23 @@ public class EnemyMovement : MonoBehaviour
     private void Attack()
     {
         // Call the attack method from the enemy attack script
-        agent.SetDestination(player.position);
+        agent.isStopped = true;
+
+        // Look at the player
+        transform.LookAt(player);
+
+        // Call the attack method from the enemy attack script
+        enemyAttack.Attack(true);
     }
 
     // Method to handle the chase state
     private void Chase()
     {
         // Move towards the player
+        agent.isStopped = false;
         agent.SetDestination(player.position);
+
+        // Call the attack method from the enemy attack script
+        enemyAttack.Attack(false);
     }
 }

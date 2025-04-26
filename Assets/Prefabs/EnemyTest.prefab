@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2792261378239430633}
   - component: {fileID: 5298362410407592698}
   - component: {fileID: 8497580720406758321}
-  - component: {fileID: 6345021586669012795}
+  - component: {fileID: 2737825713329961395}
   m_Layer: 0
-  m_Name: TestBullet
+  m_Name: EnemyTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,7 +112,7 @@ Rigidbody:
   m_Interpolate: 2
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6345021586669012795
+--- !u!114 &2737825713329961395
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3052538781291625769}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef8fc3d25880e6841ae2df65eb4382c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 29742594d097ad34482ad200576267e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0

@@ -29,9 +29,6 @@ public class TimeManager : MonoBehaviour
     public void SetPlayerTimeScale(float timeScale)
     {
         playerTimeScale = timeScale;
-
-        // Tell all objects in the scene to update their time scale
-        BroadcastMessage("OnTimeScaleChanged", timeScale, SendMessageOptions.DontRequireReceiver);
     }
 
     // Method to get the time scale

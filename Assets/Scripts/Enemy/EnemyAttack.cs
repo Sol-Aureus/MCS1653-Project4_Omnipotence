@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttack : MonoBehaviour
+public class EnemyAttack : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Transform bulletPoint;
@@ -17,28 +17,27 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private float fireRate;
 
     private bool isAttacking;
+    private bool isBursting;
     private float burstCooldownTimer;
-
-    private float currentFireRate;
-    private float currentBurstCooldown;
 
     // Update is called once per frame
     void Update()
     {
-        // Adjust the cooldown and fire rate based on the player's time scale
-        currentBurstCooldown = burstCooldown / TimeManager.instance.GetPlayerTimeScale();
-        currentFireRate = fireRate / TimeManager.instance.GetPlayerTimeScale();
+        if (TimeManager.instance.IsTimeStopped())
+        {
+            return; // Skip the update if time is stopped
+        }
 
         // Check if the burst cooldown is active
         burstCooldownTimer -= Time.deltaTime;
 
         // Check if the player is trying to attack
-        if (Input.GetButton("Fire1"))
+        if (isBursting)
         {
             if (!isAttacking)
             {
                 isAttacking = true;
-                burstCooldownTimer = currentBurstCooldown;
+                burstCooldownTimer = burstCooldown;
                 StartCoroutine(BurstFire());
             }
         }
@@ -59,7 +58,7 @@ public class PlayerAttack : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, bulletPoint.position, bulletPoint.rotation);
 
         // Configure the bullet's attributes
-        bullet.GetComponent<PlayerBullet>().SetAttributes(bulletSpeed, lifeTime, damage);
+        bullet.GetComponent<EnemyBullet>().SetAttributes(bulletSpeed, lifeTime, damage);
     }
 
     // Coroutine for burst fire
@@ -68,7 +67,16 @@ public class PlayerAttack : MonoBehaviour
         for (int i = 0; i < burstTimes; i++)
         {
             Shoot();
-            yield return new WaitForSeconds(currentFireRate);
+            yield return new WaitForSeconds(fireRate);
         }
+    }
+
+    public void Attack(bool attacking)
+    {
+        if (!isBursting)
+        {
+            burstCooldownTimer = burstCooldown;
+        }
+        isBursting = attacking;
     }
 }

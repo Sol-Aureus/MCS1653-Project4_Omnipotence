@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletMovement : MonoBehaviour
+public class EnemyBullet : MonoBehaviour
 {
     [Header("Attributes")]
     [SerializeField] private float speed;
@@ -30,18 +30,17 @@ public class BulletMovement : MonoBehaviour
         if (Physics.Linecast(previousPos, transform.position, out RaycastHit hitInfo))
         {
             // Check the tag of the object hit
-            if (hitInfo.collider.CompareTag("Enemy"))
+            if (hitInfo.collider.CompareTag("Player"))
             {
                 // Apply damage to the enemy
-                //hitInfo.collider.GetComponent<Enemy>().TakeDamage(damage);
+                hitInfo.collider.GetComponentInParent<PlayerHealth>().TakeDamage(damage);
+
                 // Destroy the bullet
-                Debug.Log("Bullet hit an enemy");
                 Destroy(gameObject);
             }
             else if (hitInfo.collider.CompareTag("Wall"))
             {
                 // Destroy the bullet on collision with a wall
-                Debug.Log("Bullet hit a wall");
                 Destroy(gameObject);
             }
         }
@@ -50,7 +49,6 @@ public class BulletMovement : MonoBehaviour
         if (moveDistance >= lifeTime)
         {
             // Destroy the bullet if it exceeds its lifetime
-            Debug.Log("Bullet out of bounds");
             Destroy(gameObject);
         }
     }
