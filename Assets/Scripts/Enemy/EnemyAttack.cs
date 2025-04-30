@@ -21,37 +21,6 @@ public class EnemyAttack : MonoBehaviour
     private bool isBursting;
     private float burstCooldownTimer;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (TimeManager.instance.IsTimeStopped())
-        {
-            return; // Skip the update if time is stopped
-        }
-
-        // Check if the burst cooldown is active
-        burstCooldownTimer -= Time.deltaTime;
-
-        // Check if the player is trying to attack
-        if (isBursting)
-        {
-            if (!isAttacking)
-            {
-                isAttacking = true;
-                burstCooldownTimer = burstCooldown;
-                StartCoroutine(BurstFire());
-            }
-        }
-
-        // Reset the attack state if the cooldown is active
-        if (burstCooldownTimer <= 0)
-        {
-            isAttacking = false;
-        }
-
-
-    }
-
     // Shoots a bullet
     private void Shoot()
     {
@@ -79,10 +48,39 @@ public class EnemyAttack : MonoBehaviour
 
     public void Attack(bool attacking)
     {
-        if (!isBursting)
+        if (isBursting)
         {
-            burstCooldownTimer = burstCooldown;
+            burstCooldownTimer = burstCooldown; // Reset the cooldown if already bursting
+            isBursting = false; // Reset the bursting state
         }
-        isBursting = attacking;
+
+        if (TimeManager.instance.IsTimeStopped())
+        {
+            return; // Skip the update if time is stopped
+        }
+
+        // Check if the burst cooldown is active
+        burstCooldownTimer -= Time.deltaTime;
+
+        // Check if the player is trying to attack
+        if (attacking)
+        {
+            if (!isAttacking)
+            {
+                isAttacking = true;
+                burstCooldownTimer = burstCooldown;
+                StartCoroutine(BurstFire());
+            }
+        }
+        else
+        {
+            isBursting = true; // Set the bursting state to true
+        }
+
+        // Reset the attack state if the cooldown is active
+        if (burstCooldownTimer <= 0)
+        {
+            isAttacking = false;
+        }
     }
 }

@@ -7,6 +7,7 @@ public class PlayerAttack : MonoBehaviour
     [Header("References")]
     [SerializeField] private Transform bulletPoint;
     [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject muzzleFlash;
 
     [Header("Attributes")]
     [SerializeField] private float bulletSpeed;
@@ -55,11 +56,22 @@ public class PlayerAttack : MonoBehaviour
     // Shoots a bullet
     private void Shoot()
     {
+        // Flash the muzzle flash
+        StartCoroutine(Flash(0.05f));
+
         // Create a bullet instance
         GameObject bullet = Instantiate(bulletPrefab, bulletPoint.position, bulletPoint.rotation);
 
         // Configure the bullet's attributes
         bullet.GetComponent<PlayerBullet>().SetAttributes(bulletSpeed, lifeTime, damage);
+    }
+
+    // Coroutine for muzzle flash
+    private IEnumerator Flash(float time)
+    {
+        muzzleFlash.SetActive(true);
+        yield return new WaitForSeconds(time);
+        muzzleFlash.SetActive(false);
     }
 
     // Coroutine for burst fire

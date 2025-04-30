@@ -186,7 +186,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 1
 --- !u!114 &9670239
 MonoBehaviour:
@@ -217,10 +217,11 @@ MonoBehaviour:
   bulletPoint: {fileID: 1029812316}
   bulletPrefab: {fileID: 3052538781291625769, guid: 63f0db2316436dd49ac415a5850e212d,
     type: 3}
+  muzzleFlash: {fileID: 963924264}
   bulletSpeed: 300
   lifeTime: 300
   damage: 10
-  burstCooldown: 1.6
+  burstCooldown: 1.4
   burstTimes: 3
   fireRate: 0.1
 --- !u!114 &9670241
@@ -262,6 +263,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA6_mesh (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_LocalPosition.x
@@ -326,6 +335,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -389,6 +406,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -451,6 +476,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -527,6 +560,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA6_mesh (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12
@@ -589,6 +630,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -653,6 +702,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (46)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8
@@ -715,6 +772,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: a9dd38c484b428f449090e885042f887, type: 3}
       propertyPath: m_Name
       value: CornerWindowA_mesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a9dd38c484b428f449090e885042f887, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a9dd38c484b428f449090e885042f887, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a9dd38c484b428f449090e885042f887, type: 3}
       propertyPath: m_LocalPosition.x
@@ -779,6 +844,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22
@@ -842,6 +915,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2
@@ -903,7 +984,7 @@ GameObject:
   m_Component:
   - component: {fileID: 147807370}
   - component: {fileID: 147807371}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: NavMesh Surface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -919,7 +1000,7 @@ Transform:
   m_GameObject: {fileID: 147807369}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.35579, y: -0.63984746, z: 10.533165}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -967,6 +1048,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1031,6 +1120,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12
@@ -1094,6 +1191,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -1156,6 +1261,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1374,6 +1487,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA4_mesh
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2
@@ -1436,6 +1557,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1500,6 +1629,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA6_mesh (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -1560,9 +1697,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 357356479}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1596,6 +1733,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1660,6 +1805,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA6_mesh (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -1722,6 +1875,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1786,6 +1947,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22
@@ -1848,6 +2017,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2030,6 +2207,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12
@@ -2092,6 +2277,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2156,6 +2349,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2
@@ -2218,6 +2419,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA6_mesh (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2282,6 +2491,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA6_mesh (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17
@@ -2344,6 +2561,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2476,6 +2701,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -2538,6 +2771,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA6_mesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2602,6 +2843,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2
@@ -2664,6 +2913,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA6_mesh (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2835,6 +3092,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA6_mesh (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2
@@ -2944,6 +3209,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12
@@ -3012,6 +3285,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 41c20a22c931844479143387a0152c7e, type: 3}
       propertyPath: m_Name
       value: GateSmallFrameB_mesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 41c20a22c931844479143387a0152c7e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 41c20a22c931844479143387a0152c7e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 41c20a22c931844479143387a0152c7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3221,6 +3502,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA6_mesh (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12
@@ -3281,9 +3570,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 923414880}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Props
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3314,6 +3603,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3366,6 +3663,89 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 942553853}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &963924264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 963924265}
+  - component: {fileID: 963924267}
+  - component: {fileID: 963924266}
+  m_Layer: 0
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &963924265
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963924264}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1029812316}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &963924266
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963924264}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 357b226e83ff92f48be970a74605e76d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &963924267
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963924264}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &971514615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3377,6 +3757,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA6_mesh (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3440,6 +3828,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3520,7 +3916,8 @@ Transform:
   m_LocalPosition: {x: 0.2, y: -0.2, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 963924265}
   m_Father: {fileID: 1959799142}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1031656389
@@ -3534,6 +3931,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA6_mesh (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3598,6 +4003,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17
@@ -3660,6 +4073,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA6_mesh (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3831,6 +4252,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA6_mesh (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2
@@ -3894,6 +4323,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA6_mesh (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22
@@ -3956,6 +4393,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA6_mesh (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4088,6 +4533,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -4148,9 +4601,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1418776866}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Scene
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4185,6 +4638,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4249,6 +4710,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA6_mesh (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12
@@ -4311,6 +4780,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4375,6 +4852,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA6_mesh (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -4437,6 +4922,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4501,6 +4994,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA6_mesh (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17
@@ -4563,6 +5064,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4627,6 +5136,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA6_mesh (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2
@@ -4690,6 +5207,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22
@@ -4750,9 +5275,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1637019983}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4856,6 +5381,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12
@@ -4918,6 +5451,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4982,6 +5523,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA6_mesh (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -5044,6 +5593,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 69850715f8d465b45a1e9698cd699191, type: 3}
       propertyPath: m_Name
       value: WallLargeB_mesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 69850715f8d465b45a1e9698cd699191, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 69850715f8d465b45a1e9698cd699191, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 69850715f8d465b45a1e9698cd699191, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5108,6 +5665,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12
@@ -5170,6 +5735,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA6_mesh (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5234,6 +5807,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -5296,6 +5877,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5360,6 +5949,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -5422,6 +6019,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA6_mesh (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5486,6 +6091,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA6_mesh (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb26efff5bd20b047b87b0df33781012, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22
@@ -5549,6 +6162,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -5611,6 +6232,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5706,6 +6335,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17
@@ -5768,6 +6405,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5994,6 +6639,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -6057,6 +6710,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2
@@ -6119,6 +6780,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6258,6 +6927,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -6320,6 +6997,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_Name
       value: FloorInteriorA4_mesh (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd5013dcdd394644b9c57e0e573898dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6434,8 +7119,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 10
-  m_Acceleration: 10
+  m_Speed: 8
+  m_Acceleration: 50
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -6443,7 +7128,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 1
+  m_BaseOffset: 0.9
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &1999274205509839573
@@ -6525,7 +7210,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1 &3782594747251517690
 GameObject:
@@ -6645,7 +7330,7 @@ MonoBehaviour:
   bulletSpeed: 300
   lifeTime: 300
   damage: 10
-  burstCooldown: 1.6
+  burstCooldown: 1.4
   burstTimes: 3
   fireRate: 0.1
 --- !u!114 &7921942408567630974

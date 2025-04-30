@@ -39,8 +39,10 @@ public class EnemyMovement : MonoBehaviour
         {
             // If time is stopped, do not move the enemy
             agent.SetDestination(transform.position); // Stop the enemy from moving
+            animator.speed = 0; // Stop the enemy's animation
             return;
         }
+        animator.speed = 1; // Resume the enemy's animation
 
         // Check if the player is within the enemy's line of sight
         if (Physics.Linecast(transform.position, player.position, out RaycastHit hit))

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] private TrailRenderer trail;
+
     [Header("Attributes")]
     [SerializeField] private float speed;
     [SerializeField] private float lifeTime;
@@ -59,5 +62,8 @@ public class EnemyBullet : MonoBehaviour
         this.speed = speed;
         this.damage = damage;
         this.lifeTime = lifeTime;
+
+        // Set the trail renderer's time to the bullet's lifetime
+        trail.time = 2 / speed;
     }
 }
