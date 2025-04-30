@@ -6,7 +6,6 @@ public class PlayerCamera : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Transform player;
-    [SerializeField] private Transform bulletPoint;
 
     [Header("Attributes")]
     [SerializeField] private float sensX;
@@ -36,11 +35,10 @@ public class PlayerCamera : MonoBehaviour
         rotationY += mouseX;
 
         // Prevent the camera from flipping upside down
-        rotationX = Mathf.Clamp(rotationX, -90f, 90f);
+        rotationX = Mathf.Clamp(rotationX, -90, 90);
 
         // Apply the rotation to the camera
         transform.rotation = Quaternion.Euler(rotationX, rotationY, 0);
         player.rotation = Quaternion.Euler(0, rotationY, 0);
-        bulletPoint.rotation = Quaternion.Euler(rotationX, rotationY, 0);
     }
 }

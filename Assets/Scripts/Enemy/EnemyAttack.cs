@@ -7,6 +7,7 @@ public class EnemyAttack : MonoBehaviour
     [Header("References")]
     [SerializeField] private Transform bulletPoint;
     [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Animator animator;
 
     [Header("Attributes")]
     [SerializeField] private float bulletSpeed;
@@ -66,9 +67,14 @@ public class EnemyAttack : MonoBehaviour
     {
         for (int i = 0; i < burstTimes; i++)
         {
+            // Set the animator to attack
+            animator.SetTrigger("Attack");
             Shoot();
+
+            // Wait for the fire rate before shooting again
             yield return new WaitForSeconds(fireRate);
         }
+        animator.SetTrigger("Idle");
     }
 
     public void Attack(bool attacking)

@@ -9,6 +9,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private EnemyAttack enemyAttack;
+    [SerializeField] private Animator animator;
 
     private Transform player;
 
@@ -79,6 +80,9 @@ public class EnemyMovement : MonoBehaviour
         // Call the attack method from the enemy attack script
         agent.isStopped = true;
 
+        // Set the enemy's animation to attack
+        animator.SetBool("IsAttacking", true);
+
         // Look at the player
         transform.LookAt(player);
 
@@ -92,6 +96,9 @@ public class EnemyMovement : MonoBehaviour
         // Move towards the player
         agent.isStopped = false;
         agent.SetDestination(player.position);
+
+        // Set the enemy's animation to run
+        animator.SetBool("IsAttacking", false);
 
         // Call the attack method from the enemy attack script
         enemyAttack.Attack(false);
