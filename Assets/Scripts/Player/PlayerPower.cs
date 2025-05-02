@@ -4,30 +4,52 @@ using UnityEngine;
 
 public class PlayerPower : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] private Collider playerCollider;
+
     [Header("Attributes")]
     [SerializeField] private float playerHaltTime;
     [SerializeField] private float playerRushTime;
-    [SerializeField] private bool isHalt;
+    [SerializeField] private int powerType;
 
     // Update is called once per frame
     void Update()
     {
+        // Activates the player's power when the player presses the jump button
         if (Input.GetButtonDown("Jump"))
         {
-            if (isHalt)
+            // Checks if there is enough duration left
+            if (TimeManager.instance.GetCurrentDuration() > 0)
             {
-                TimeManager.instance.SetPlayerTimeScale(playerHaltTime);
-                TimeManager.instance.StopTime(true);
-            }
-            else
-            {
-                TimeManager.instance.SetPlayerTimeScale(playerRushTime);
+                // Checks the player's power type
+                powerType = TimeManager.instance.GetPower();
+
+                // Sets the player's time scale based on the power type
+                switch (powerType)
+                {
+                    case 0: // Halt
+                        TimeManager.instance.SetPlayerTimeScale(playerHaltTime);
+                        TimeManager.instance.StopTime(true);
+                        break;
+                    case 1: // Rush
+                        TimeManager.instance.SetPlayerTimeScale(playerRushTime);
+                        break;
+                    case 2: // Omit
+                        playerCollider.enabled = false;
+                        break;
+                }
+
+                TimeManager.instance.StartCountdown(true);
             }
         }
-        if (Input.GetButtonUp("Jump"))
+
+        // Reset the time scale and collider when the player releases the jump button
+        if (Input.GetButtonUp("Jump") || TimeManager.instance.GetCurrentDuration() <= 0)
         {
             TimeManager.instance.SetPlayerTimeScale(1);
             TimeManager.instance.StopTime(false);
+            playerCollider.enabled = true;
+            TimeManager.instance.StartCountdown(false);
         }
     }
 }

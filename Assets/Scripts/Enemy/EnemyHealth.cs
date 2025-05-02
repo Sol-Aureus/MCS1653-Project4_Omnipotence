@@ -24,6 +24,7 @@ public class EnemyHealth : MonoBehaviour
         // Check if the enemy is dead
         if (currentHealth <= 0)
         {
+            TimeManager.instance.SwitchPower(Random.Range(0, 3));
             Destroy(gameObject);
         }
     }
