@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] private Slider healthSlider;
+
     [Header("Attributes")]
     [SerializeField] private float maxHealth;
 
@@ -26,5 +30,8 @@ public class PlayerHealth : MonoBehaviour
         {
             MenuManager.menus.Win();
         }
+
+        // Update the health slider
+        healthSlider.value = currentHealth / maxHealth;
     }
 }

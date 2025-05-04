@@ -17,6 +17,7 @@
 <br>
 
 1. **What are the controls to your game? How do we play?**
+Esc to pause
 WASD to move
 Space to use power
 Mouse to look around
