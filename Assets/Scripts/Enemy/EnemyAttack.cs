@@ -21,6 +21,13 @@ public class EnemyAttack : MonoBehaviour
     private bool isBursting;
     private float burstCooldownTimer;
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        isAttacking = true;
+        burstCooldownTimer = burstCooldown * 2; // Reset the cooldown if already bursting
+    }
+
     // Shoots a bullet
     private void Shoot()
     {
@@ -50,7 +57,7 @@ public class EnemyAttack : MonoBehaviour
     {
         if (isBursting)
         {
-            burstCooldownTimer = burstCooldown; // Reset the cooldown if already bursting
+            burstCooldownTimer = burstCooldown * 2; // Reset the cooldown if already bursting
             isBursting = false; // Reset the bursting state
         }
 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBullet : MonoBehaviour
+public class PlayerBullet : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private TrailRenderer trail;
@@ -33,10 +33,10 @@ public class EnemyBullet : MonoBehaviour
         if (Physics.Linecast(previousPos, transform.position, out RaycastHit hitInfo))
         {
             // Check the tag of the object hit
-            if (hitInfo.collider.CompareTag("Player"))
+            if (hitInfo.collider.CompareTag("Enemy"))
             {
                 // Apply damage to the enemy
-                hitInfo.collider.GetComponentInParent<PlayerHealth>().TakeDamage(damage);
+                hitInfo.collider.GetComponentInParent<EnemyHealth>().TakeDamage(damage);
 
                 // Destroy the bullet
                 Destroy(gameObject);
@@ -64,6 +64,6 @@ public class EnemyBullet : MonoBehaviour
         this.lifeTime = lifeTime;
 
         // Set the trail renderer's time to the bullet's lifetime
-        trail.time = 2 / speed;
+        trail.time = 5 / speed;
     }
 }
