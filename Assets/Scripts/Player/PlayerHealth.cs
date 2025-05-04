@@ -24,8 +24,7 @@ public class PlayerHealth : MonoBehaviour
         // Check if the enemy is dead
         if (currentHealth <= 0)
         {
-            Time.timeScale = 0f; // Stop time
-            Debug.Log("Player is dead");
+            MenuManager.menus.Win();
         }
     }
 }

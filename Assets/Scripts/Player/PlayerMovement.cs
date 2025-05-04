@@ -43,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 velo = Vector3.zero;
         velo += transform.right * horizontalInput;
         velo += transform.forward * verticalInput;
+        velo.Normalize(); // Normalize the vector to ensure consistent speed in all directions
         velo *= currentMoveSpeed;
 
         velo.y = rb.velocity.y; // Preserve the y velocity

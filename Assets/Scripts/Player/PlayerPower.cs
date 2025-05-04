@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class PlayerPower : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Collider playerCollider;
+    [SerializeField] private Volume playerVolume;
+    [SerializeField] private VolumeProfile defaultProfile;
 
     [Header("Attributes")]
     [SerializeField] private float playerHaltTime;
@@ -30,12 +33,15 @@ public class PlayerPower : MonoBehaviour
                     case 0: // Halt
                         TimeManager.instance.SetPlayerTimeScale(playerHaltTime);
                         TimeManager.instance.StopTime(true);
+                        playerVolume.profile = TimeManager.instance.GetVolumeProfile();
                         break;
                     case 1: // Rush
                         TimeManager.instance.SetPlayerTimeScale(playerRushTime);
+                        playerVolume.profile = TimeManager.instance.GetVolumeProfile();
                         break;
                     case 2: // Omit
                         playerCollider.enabled = false;
+                        playerVolume.profile = TimeManager.instance.GetVolumeProfile();
                         break;
                 }
 
@@ -50,6 +56,7 @@ public class PlayerPower : MonoBehaviour
             TimeManager.instance.StopTime(false);
             playerCollider.enabled = true;
             TimeManager.instance.StartCountdown(false);
+            playerVolume.profile = defaultProfile;
         }
     }
 }

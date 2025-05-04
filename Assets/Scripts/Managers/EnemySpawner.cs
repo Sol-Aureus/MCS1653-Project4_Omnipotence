@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    public static EnemySpawner main;
+
     [Header("References")]
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private Transform[] spawnPoints;
@@ -20,7 +22,20 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private int maxEnemies;
     [SerializeField] private int currentEnemies;
 
+
+    public int enemiesKilled = 0;
+    public float timeSurvived = 0;
     private float spawnTimer;
+
+    private void Awake()
+    {
+        // Checks if the instance is already set
+        if (main == null)
+        {
+            // Sets the instance to this
+            main = this;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +46,9 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Increases the time survived
+        timeSurvived += Time.deltaTime;
+
         // Prevents spawing when time is stopped
         if (TimeManager.instance.IsTimeStopped())
         {
@@ -88,5 +106,12 @@ public class EnemySpawner : MonoBehaviour
             }
         }
         
+    }
+
+    // Decrease the current enemies count
+    public void DecreaseEnemies()
+    {
+        currentEnemies--;
+        enemiesKilled++;
     }
 }

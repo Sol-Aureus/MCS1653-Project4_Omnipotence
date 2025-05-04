@@ -8,6 +8,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private Transform bulletPoint;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject muzzleFlash;
+    [SerializeField] private AudioClip shootSound;
 
     [Header("Attributes")]
     [SerializeField] private float bulletSpeed;
@@ -26,12 +27,16 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (MenuManager.menus.isPaused)
+        {
+            return;
+        }
         // Adjust the cooldown and fire rate based on the player's time scale
-        currentBurstCooldown = burstCooldown / TimeManager.instance.GetPlayerTimeScale();
-        currentFireRate = fireRate / TimeManager.instance.GetPlayerTimeScale();
+        currentBurstCooldown = burstCooldown;
+        currentFireRate = fireRate;
 
         // Check if the burst cooldown is active
-        burstCooldownTimer -= Time.deltaTime;
+        burstCooldownTimer -= Time.deltaTime * TimeManager.instance.GetPlayerTimeScale();
 
         // Check if the player is trying to attack
         if (Input.GetButton("Fire1"))
@@ -57,7 +62,10 @@ public class PlayerAttack : MonoBehaviour
     private void Shoot()
     {
         // Flash the muzzle flash
-        StartCoroutine(Flash(0.05f));
+        StartCoroutine(Flash(0.04f));
+
+        // Play the shoot sound
+        SoundFXManager.instance.PlaySound(shootSound, transform, 1);
 
         // Create a bullet instance
         GameObject bullet = Instantiate(bulletPrefab, bulletPoint.position, bulletPoint.rotation);
@@ -80,7 +88,7 @@ public class PlayerAttack : MonoBehaviour
         for (int i = 0; i < burstTimes; i++)
         {
             Shoot();
-            yield return new WaitForSeconds(currentFireRate);
+            yield return new WaitForSeconds(currentFireRate / TimeManager.instance.GetPlayerTimeScale());
         }
     }
 }

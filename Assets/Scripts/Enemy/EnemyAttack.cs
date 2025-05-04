@@ -8,6 +8,7 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField] private Transform bulletPoint;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Animator animator;
+    [SerializeField] private AudioClip shootSound;
 
     [Header("Attributes")]
     [SerializeField] private float bulletSpeed;
@@ -33,6 +34,9 @@ public class EnemyAttack : MonoBehaviour
     {
         // Create a bullet instance
         GameObject bullet = Instantiate(bulletPrefab, bulletPoint.position, bulletPoint.rotation);
+
+        // Play the shoot sound
+        SoundFXManager.instance.PlaySound(shootSound, transform, 1);
 
         // Configure the bullet's attributes
         bullet.GetComponent<EnemyBullet>().SetAttributes(bulletSpeed, lifeTime, damage);

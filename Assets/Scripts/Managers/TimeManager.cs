@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class TimeManager : MonoBehaviour
@@ -10,6 +11,7 @@ public class TimeManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private Slider timeSlider;
     [SerializeField] private Image timeSliderFill;
+    [SerializeField] private VolumeProfile[] volumeProfiles;
 
     [Header("Time Settings")]
     [SerializeField] private float playerTimeScale;
@@ -124,5 +126,11 @@ public class TimeManager : MonoBehaviour
     public float GetCurrentDuration()
     {
         return currentDuration;
+    }
+
+    // Method to get the volume profile based on the power type
+    public VolumeProfile GetVolumeProfile()
+    {
+        return volumeProfiles[powerType];
     }
 }

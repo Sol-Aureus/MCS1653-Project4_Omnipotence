@@ -10,6 +10,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     [SerializeField] private EnemyAttack enemyAttack;
     [SerializeField] private Animator animator;
+    [SerializeField] private AudioClip spawnSound;
 
     private Transform player;
 
@@ -29,6 +30,8 @@ public class EnemyMovement : MonoBehaviour
 
         // Find the player object in the scene
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        SoundFXManager.instance.PlaySound(spawnSound, transform, 2); // Play the spawn sound
     }
 
     // Update is called once per frame

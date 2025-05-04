@@ -26,7 +26,7 @@ public class EnemyBullet : MonoBehaviour
         previousPos = transform.position;
 
         // Move the bullet forward
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        transform.Translate(new Vector3(0, 1, 0) * speed * Time.deltaTime);
         moveDistance += speed * Time.deltaTime;
 
         // Need to send a raycast to check if the bullet hit something (bullet moves too fast)
@@ -64,6 +64,6 @@ public class EnemyBullet : MonoBehaviour
         this.lifeTime = lifeTime;
 
         // Set the trail renderer's time to the bullet's lifetime
-        trail.time = 5 / speed;
+        trail.time = 10 / speed;
     }
 }

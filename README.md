@@ -21,30 +21,37 @@ WASD to move
 Space to use power
 Mouse to look around
 M1 to shoot
+Shoot the capsules to refresh the power
 
 
 <br>
 
 2. **What creative additions did you make? How can we find them?**
-
+Killing an enemy will give you a random power
 
 
 <br>
 
 3. **Any assets used that you didn't create yourself?** <br> (art, music, etc. Just tell us where you got it, link it here)
-
+https://assetstore.unity.com/packages/3d/environments/sci-fi/free-lowpoly-scifi-110070
+https://assetstore.unity.com/packages/3d/characters/robots/robot-hero-pbr-hp-polyart-106154
+https://assetstore.unity.com/packages/3d/props/tools/low-poly-casual-sci-fi-bottle-2-287907
+https://assetstore.unity.com/packages/3d/props/low-poly-gems-245515
+https://pixabay.com/music/upbeat-phonk-292971/
+https://freesound.org/people/magnuswaker/sounds/592573/
+https://freesound.org/people/LittleRobotSoundFactory/sounds/270529/
 
 
 <br>
 
 4. **Did you receive help from anyone outside this class?** <br> (list their names and what they helped with)
-
+None
 
 
 <br>
 
 5. **Did you get help from any AI Code Assistants?** <br> (Tell us which .cs file to look in for the citation and describe what you learned)
-
+N/A
 
 
 <br>
@@ -56,13 +63,13 @@ https://www.youtube.com/watch?v=f473C43s8nE
 <br>
 
 7. **What trouble did you have with this project?**
-
+Enemy ai
 
 
 <br>
 
 8. **Is there anything else we should know?**
-
+Nope
 
 
 
